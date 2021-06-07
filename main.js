@@ -35,8 +35,23 @@ abbcccdddd
 // console.log(str.match(regexp2))
 
 // test(): boolean 값으로 반환
-const regexp = /fox/gi
-console.log(regexp.test(str))
+// const regexp = /fox/gi
+// console.log(regexp.test(str))
 
-// replace 문자 대체
-console.log(str.replace(regexp, 'AAA'))
+// // replace 문자 대체
+// console.log(str.replace(regexp, 'AAA'))
+
+// ====================================
+// 플래그
+const regexp = /the/
+console.log(str.match(regexp))
+
+const regexp2 = /the/g
+console.log(str.match(regexp2))
+
+const regexp3 = /the/gi
+console.log(str.match(regexp3))
+
+// 백슬래시 기호 이용 (일반적인 문자로 변환)
+// 마침표로 끝나는 부분을 찾아줌
+console.log(str.match(/\.$/gim))
