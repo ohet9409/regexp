@@ -24,12 +24,19 @@ abbcccdddd
 // 생성자 방식
 // const regexp = new RegExp('the', 'g')
 // 리터럴 방식
-const regexp = /the/g
-console.log(str.match(regexp))
+// const regexp = /the/g
+// console.log(str.match(regexp))
 
-// 대소문자 안가리고 검색
-// 생성자 방식
-// const regexp2 = new RegExp('the', 'gi')
-// 리터럴 방식
-const regexp2 = /the/gi
-console.log(str.match(regexp2))
+// // 대소문자 안가리고 검색
+// // 생성자 방식
+// // const regexp2 = new RegExp('the', 'gi')
+// // 리터럴 방식
+// const regexp2 = /the/gi
+// console.log(str.match(regexp2))
+
+// test(): boolean 값으로 반환
+const regexp = /fox/gi
+console.log(regexp.test(str))
+
+// replace 문자 대체
+console.log(str.replace(regexp, 'AAA'))

@@ -132,15 +132,20 @@ var str = "\n010-1234-5678\nhello@gmail.com;\nhttps://www.omdbapi.com/?apikey=70
 // 생성자 방식
 // const regexp = new RegExp('the', 'g')
 // 리터럴 방식
+// const regexp = /the/g
+// console.log(str.match(regexp))
+// // 대소문자 안가리고 검색
+// // 생성자 방식
+// // const regexp2 = new RegExp('the', 'gi')
+// // 리터럴 방식
+// const regexp2 = /the/gi
+// console.log(str.match(regexp2))
+// test(): boolean 값으로 반환
 
-var regexp = /the/g;
-console.log(str.match(regexp)); // 대소문자 안가리고 검색
-// 생성자 방식
-// const regexp2 = new RegExp('the', 'gi')
-// 리터럴 방식
+var regexp = /fox/gi;
+console.log(regexp.test(str)); // replace 문자 대체
 
-var regexp2 = /the/gi;
-console.log(str.match(regexp2));
+console.log(str.replace(regexp, 'AAA'));
 },{}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
@@ -169,7 +174,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "59548" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "56561" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
