@@ -67,43 +67,96 @@ abbcccdddd
 http
 d`
 
-console.log(
-  // d로 끝나는 부분을 찾는다.
-  str.match(/d$/gm)
-)
+// console.log(
+//   // d로 끝나는 부분을 찾는다.
+//   str.match(/d$/gm)
+// )
 
-console.log(
-  // t로 시작하는 부분을 찾는다.
-  str.match(/^t/gm)
-)
+// console.log(
+//   // t로 시작하는 부분을 찾는다.
+//   str.match(/^t/gm)
+// )
 
-console.log(
-  // h로 시작하고 p로 끝나는 문자를 찾는다 4자리
-  str.match(/h..p/g)
-)
+// console.log(
+//   // h로 시작하고 p로 끝나는 문자를 찾는다 4자리
+//   str.match(/h..p/g)
+// )
 
-console.log(
-  // fox 또는 dog라는 값을 반환
-  str.match(/fox|dog/g)
-)
+// console.log(
+//   // fox 또는 dog라는 값을 반환
+//   str.match(/fox|dog/g)
+// )
 
-console.log(
-  // s가 없거나 s가 있는 http로 시작하는 문자를 찾는다.
-  str.match(/https?/g)
-)
+// console.log(
+//   // s가 없거나 s가 있는 http로 시작하는 문자를 찾는다.
+//   str.match(/https?/g)
+// )
 
-// d가 2번 반복되는 곳을 찾는다.
-console.log(
-  str.match(/d{2}/)
-)
+// // d가 2번 반복되는 곳을 찾는다.
+// console.log(
+//   str.match(/d{2}/)
+// )
 
-// d가 2번 이상 반복되는 곳을 찾는다.
-console.log(
-  str.match(/d{2,}/)
-)
+// // d가 2번 이상 반복되는 곳을 찾는다.
+// console.log(
+//   str.match(/d{2,}/)
+// )
 
-// 2글자 이상 3글자 이하인 단어 검색
-// 숫자나 알파벳이 아닌 것을 구분자로 선언
+// // 2글자 이상 3글자 이하인 단어 검색
+// // 숫자나 알파벳이 아닌 것을 구분자로 선언
+// console.log(
+//   str.match(/\b\w{2,3}\b/g)
+// )
+
+// f 또는 o 또는 x 출력
+// console.log(
+//   str.match(/[fox]/g)
+// )
+
+// // f 또는 o 또는 x 출력 연속 되는 문자 출력
+// console.log(
+//   str.match(/[fox]{1,}/g)
+// )
+
+// // 0부터 9까지 연속되는 숫자 출력
+// console.log(
+//   str.match(/[0-9]{1,}/g)
+// )
+
+// // 모든 문자 출력
+// console.log(
+//   str.match(/\w/g)
+// )
+
+// // f로 시작하는 모든 영단어를 출력
+// console.log(
+//   str.match(/\bf\w{1,}\b/g)
+// )
+
+// // 연속된 숫자 모두 출력
+// console.log(
+//   str.match(/\d{1,}/g)
+// )
+
+// // 공백 문자 출력
+// console.log(
+//   str.match(/\s/g)
+// )
+
+// // 공백문자 활용
+// const h = `  the hello world !
+
+// `
+// //  공백문자 제거
+// console.log(
+//   h.replace(/\s/g, '')
+// )
+
+// @앞쪽 일치 출력
 console.log(
-  str.match(/\b\w{2,3}\b/g)
+  str.match(/.{1,}(?=@)/g)
+)
+// @ 뒤쪽 일치 출력 
+console.log(
+  str.match(/(?<=@).{1,}/g)
 )
